@@ -7,6 +7,12 @@ import time
 from threading import Thread, Timer
 import ConfigParser
 
+import logging
+logging.basicConfig()
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.info("hoge")
+
 inifile = ConfigParser.SafeConfigParser()
 inifile.read('./config.ini')
 
